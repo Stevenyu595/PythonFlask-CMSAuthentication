@@ -9,4 +9,5 @@ def protected(route_function):
         if g.user is None:
             return redirect(url_for('admin.login'))
         return route_function(**kwargs)
+    return wrapped_route_function()
 
